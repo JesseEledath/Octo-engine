@@ -1,11 +1,7 @@
-# PROJECT 4 README <!-- omit in toc -->
-
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
+# Octo-trainer
 
 - [Overview](#overview)
-- [MVP](#mvp)
+- [Minimum-Viable-Product](#Minimum-Viable-Product)
   - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
@@ -23,48 +19,41 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_**Octo-trainer** is a fitness application that will allow users to track what they eat and create/share workouts and what the combined information means to them and thier health._
 
 
 <br>
 
-## MVP
+## Minimum-Viable-Product
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+> The Octo-Trainer MVP will provide frontend users an account creation. Users will be able to write, update, and delete foods in the food-tracker, as well as workouts that are created. User account information, user created workouts,and personal food-tracker will be stored on a Ruby on Rails backend.
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Ruby on Rails backend for storing user info,assocaited food-tracker and workouts_
+- _Using logic to give daily calorie info_
+- _User can create, customize, and delete foods and workouts._
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
-
+|      React       | _Declarative and component based programming._ |
+|   React Router   | _A collection of navigational components for your application._ |
+|   Materials-UI   | _React components for faster and easier web development._ |
+|      Rails       | _Ruby on Rails is open source software._ |
+|      Ruby        | _Open source programming language with a focus on simplicity and productivity._ |
+|      Axios       | _Promise based HTTP client for the browser and Node.js._ |
 <br>
 
 ### Client (Front End)
 
 #### Wireframes
-
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 ![Dummy Link](url)
 
@@ -103,15 +92,24 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
+|__ App.jsx
+|__ screens/
+      |__ Landing.jsx
+      |__ Login.jsx
+      |__ Register.jsx
+      |__ WorkoutIndex.jsx
+      |__ FoodTracker.jsx
+      |__ WorkoutDetails.jsx
 
+|__ components/
+      |__Layout/
+        |__Nav.jsx
+        |__footer.jsx
+|__ services/
+      |__ api-config.js
+      |__ auth.js
+      |__ users.js
+      |__ categories.js
 ```
 
 #### Time Estimates
@@ -124,15 +122,12 @@ src
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
 ### Server (Back End)
 
 #### ERD Model
-
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 [ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
 <br>
