@@ -54,7 +54,7 @@ _**Octo-trainer** is a fitness application that will allow users to track what t
 ### Client (Front End)
 
 #### Wireframes
-![img](https://i.imgur.com/kyQ3CEA.png)
+![Imgur](https://i.imgur.com/px1VEf4.png)
 
 - Mobile Resource Index
 
