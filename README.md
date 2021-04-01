@@ -79,6 +79,8 @@ src
       |__ WorkoutIndex.jsx
       |__ FoodTracker.jsx
       |__ WorkoutDetails.jsx
+      |__ AddFood.jsx
+      |__ FinishedWorkout.jsx
 
 |__ components/
       |__Layout/
@@ -89,6 +91,7 @@ src
       |__ auth.js
       |__ users.js
       |__ categories.js
+      |__ workout.js
 ```
 
 #### Time Estimates
@@ -108,14 +111,16 @@ src
 
 #### ERD Model
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+![ERD](https://i.imgur.com/YuMTpdj.png)
 <br>
 
 ***
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Hydraition tracker
+- adding custom workouts
+- reminders to eat if food not added in a timeframe
 
 ***
 
