@@ -1,2 +1,0 @@
-class FoodTable < ApplicationRecord
-end
