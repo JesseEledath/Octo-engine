@@ -8,7 +8,7 @@
 Workout.destroy_all
 User.destroy_all
 UserWorkoutJoin.destroy_all
-Food_Tracker.destroy_all
+Food.destroy_all
 @admin = User.create!(username: 'admin', email: 'admin@email.com', password: '123456')
 
 puts "#{User.count} users created"
@@ -17,5 +17,5 @@ puts "#{User.count} users created"
 Walk on a path with no incline', category: 'Aerobic', calories: 133, time: 30)
 puts "#{Workout.count} workouts created"
 
-@alpha = Food_Tracker.create!(food_name: 'Carrots', calories: 25)
-puts "#{Food_Tracker.count} Food Trackers created"
+@alpha = Food.create!(food_name: 'Carrots', calories: 25, user_id: @admin.id)
+puts "#{Food.count} Food created"
