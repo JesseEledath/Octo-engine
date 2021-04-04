@@ -1,44 +1,44 @@
-class FoodTrackersController < ApplicationController
-  before_action :set_food_tracker, only: [:show, :update, :destroy]
+class FoodsController < ApplicationController
+  before_action :set_food, only: [:show, :update, :destroy]
 
   def index
-    @food_trackers = FoodTracker.all
-    render json: @food_trackers
+    @foods = Food.all
+    render json: @foods
   end
 
   def show
-    render json: @food_tracker
+    render json: @food
   end
 
   def create
-    @food_tracker = FoodTracker.new(food_tracker_params)
+    @food = Food.new(food_params)
 
-    if @food_tracker.save
-      render json: @food_tracker, status: :created
+    if @food.save
+      render json: @food, status: :created
     else
-      render json: @food_tracker.errors, status: :unprocessable_entity
+      render json: @food.errors, status: :unprocessable_entity
     end
   end
 
   def update
-    if @food_tracker.update(food_tracker_params)
-      render json: @food_tracker
+    if @food.update(food_params)
+      render json: @food
     else
-      render json: @food_tracker.errors, status: :unprocessable_entity
+      render json: @food.errors, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @food_tracker.destroy
+    @food.destroy
   end
 
   private
 
-  def set_food_tracker
-    @food_tracker = FoodTracker.find(params[:id])
+  def set_food
+    @food = Food.find(params[:id])
   end
 
-  def food_tracker_params
-    params.require(:food_tracker).permit(:name, :breed)
+  def food_params
+    params.require(:food).permit(:name, :breed)
   end
 end
