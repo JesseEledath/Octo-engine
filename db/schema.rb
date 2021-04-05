@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_01_200903) do
+ActiveRecord::Schema.define(version: 2021_04_04_213548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "food_tracker", force: :cascade do |t|
-    t.string "food_name"
-    t.string "calories"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -29,6 +22,24 @@ ActiveRecord::Schema.define(version: 2021_04_01_200903) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+  create_table "foods", force: :cascade do |t|
+    t.string "food_name"
+    t.string "calories"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_foods_on_user_id"
+  end
+
+  create_table "user_workout_joins", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "workout_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_workout_joins_on_user_id"
+    t.index ["workout_id"], name: "index_user_workout_joins_on_workout_id"
+  end
+
 
   create_table "workouts", force: :cascade do |t|
     t.string "content"
@@ -39,4 +50,7 @@ ActiveRecord::Schema.define(version: 2021_04_01_200903) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "foods", "users"
+  add_foreign_key "user_workout_joins", "users"
+  add_foreign_key "user_workout_joins", "workouts"
 end
