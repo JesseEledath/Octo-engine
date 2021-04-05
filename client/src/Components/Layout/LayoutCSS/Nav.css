@@ -3,7 +3,7 @@ header {
   border-bottom: 1px solid black;
   text-align: center;
   padding: 5px;
-  position: fixed;
+position: sticky-top;
   left: 0;
   top: 0;
   width: 100%;

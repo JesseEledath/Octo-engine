@@ -5,10 +5,10 @@ import Landing from './Screens/Landing'
 // Imports =========================================================
 function App() {
   return (
-    <div>
+    <div className='layout-contianer'>
       <Layout>
         <Switch>
-<Landing />
+        <Landing />
         </Switch>
       </Layout>
     </div>
