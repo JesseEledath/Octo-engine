@@ -49,26 +49,32 @@ function App() {
   };
   return (
     <div className="layout-contianer">
-      <Layout>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
-          <Route path="/">
-            <Landing />
+          <Route path="/workouts/:id/:user_id/">
+            <FinishedWorkout />
+          </Route>
+          <Route path="/workouts/:id/">
+            <WorkoutDetails />
+          </Route>
+          <Route path="/foodtracker/:user_id/">
+            <FoodTracker />
           </Route>
           <Route path="/login">
-            <Login />
+            <Login handleLogin={handleLogin} />
           </Route>
           <Route path="/register">
-            <Register />
+            <Register handleRegister={handleRegister} />
           </Route>
           <Route path="/food/new">
             <AddFood />
           </Route>
-          <Route path="/workouts/:user_id/">
-            <FinishedWorkout />
-            </Route>
-          <FoodTracker />
-          <WorkoutDetails />
-          <WorkoutIndex />
+          <Route path="/workouts/">
+            <WorkoutIndex />
+          </Route>
+          <Route path="/">
+            <Landing />
+          </Route>
         </Switch>
       </Layout>
     </div>
