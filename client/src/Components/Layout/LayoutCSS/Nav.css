@@ -1,13 +1,13 @@
 header {
-  background-color: #60BA7C;
+  background-color: #60ba7c;
   border-bottom: 1px solid black;
   text-align: center;
   padding: 5px;
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
 }
-.nav-links a{
-  margin: 10px
+.nav-links a {
+  margin: 5px;
 }
