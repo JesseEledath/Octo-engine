@@ -52,25 +52,25 @@ function App() {
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path="/workouts/:id/:user_id/">
-            <FinishedWorkout />
+            <FinishedWorkout currentUser={currentUser}/>
           </Route>
           <Route path="/workouts/:id/">
-            <WorkoutDetails />
+            <WorkoutDetails currentUser={currentUser}/>
           </Route>
           <Route path="/foodtracker/:user_id/">
-            <FoodTracker />
+            <FoodTracker currentUser={currentUser}/>
           </Route>
           <Route path="/login">
-            <Login handleLogin={handleLogin} />
+            <Login handleLogin={handleLogin} currentUser={currentUser}/>
           </Route>
           <Route path="/register">
-            <Register handleRegister={handleRegister} />
+            <Register handleRegister={handleRegister} currentUser={currentUser}/>
           </Route>
           <Route path="/food/new">
-            <AddFood />
+            <AddFood currentUser={currentUser}/>
           </Route>
           <Route path="/workouts/">
-            <WorkoutIndex />
+            <WorkoutIndex currentUser={currentUser}/>
           </Route>
           <Route path="/">
             <Landing />
