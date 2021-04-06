@@ -2,9 +2,8 @@
   text-align: center;
   display: flex;
   font-family: 'Cairo', sans-serif;
-  padding-top: 60px;
 }
-.layout-contianer{
-  display: flex;
-  justify-content: center;
+a{
+  text-decoration: none;
+  font-family: 'Cairo',sans-serif;
 }

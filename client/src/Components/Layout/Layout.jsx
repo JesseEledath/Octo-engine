@@ -8,7 +8,7 @@ export default function Layout(props) {
     <>
       <Nav />
       <main className="home-main">
-        <>{props.children}</>
+        {props.children}
       </main>
       <Footer />
     </>
