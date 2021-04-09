@@ -8,6 +8,7 @@ import Register from "./Screens/Register";
 import AddFood from "./Screens/AddFood";
 import FinishedWorkout from "./Screens/FinishedWorkout";
 import FoodTracker from "./Screens/FoodTracker";
+import EditFood from "./Screens/EditFood"
 import WorkoutDetails from "./Screens/WorkoutDetails";
 import WorkoutIndex from "./Screens/WorkoutIndex";
 // Imports =========================================================
@@ -51,7 +52,7 @@ function App() {
     <div className="layout-contianer">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
-          <Route path="/workouts/:id/:user_id/">
+          <Route path="/workouts/:id/">
             <FinishedWorkout currentUser={currentUser}/>
           </Route>
           <Route path="/workouts/:id/">
@@ -66,6 +67,9 @@ function App() {
           <Route path="/register">
             <Register handleRegister={handleRegister} currentUser={currentUser}/>
           </Route>
+          <Route path="/food/:id">
+            <EditFood currentUser={currentUser}/>
+            </Route>
           <Route path="/food/new">
             <AddFood currentUser={currentUser}/>
           </Route>
