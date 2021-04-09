@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-  before_action :authorize_request
+  # before_action :authorize_request
   before_action :set_workout, only: [:show, :update, :destroy]
 
   def index
@@ -40,6 +40,6 @@ class WorkoutsController < ApplicationController
   end
 
   def workout_params
-    params.require(:workout).permit(:name, :breed)
+    params.require(:workout).permit(:content, :category, :calories, :time)
   end
 end

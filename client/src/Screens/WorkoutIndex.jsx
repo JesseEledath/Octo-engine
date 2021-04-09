@@ -12,7 +12,7 @@ function WorkoutIndex(props) {
       setWorkouts(workoutData);
     }
     fetchFoods();
-  }, [workouts])
+  }, [])
 
 
 return (
