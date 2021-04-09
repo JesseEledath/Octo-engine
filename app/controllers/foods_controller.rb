@@ -1,9 +1,9 @@
 class FoodsController < ApplicationController
-  # before_action :authorize_request
+  before_action :authorize_request
   before_action :set_food, only: [:show, :update, :destroy]
 
   def index
-    @foods = Food.all
+    @foods = @current_user.foods
     render json: @foods
   end
 

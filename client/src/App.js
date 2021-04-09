@@ -57,7 +57,7 @@ function App() {
           <Route path="/workouts/:id/">
             <WorkoutDetails currentUser={currentUser}/>
           </Route>
-          <Route path="/foodtracker/:user_id/">
+          <Route path="/foods">
             <FoodTracker currentUser={currentUser}/>
           </Route>
           <Route path="/login">
