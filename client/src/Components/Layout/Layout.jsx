@@ -6,7 +6,7 @@ import './LayoutCSS/Layout.css'
 export default function Layout(props) {
   return (
     <>
-      <Nav />
+      <Nav props={props}/>
       <main className="home-main">
         {props.children}
       </main>

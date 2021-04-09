@@ -15,6 +15,18 @@ Food.destroy_all
 
 @dumbbells = Workout.create!(content: 'Walking: 3.5 mph (17 min/mi)
 Walk on a path with no incline', category: 'Aerobic', calories: 133, time: 30)
+@dumbbells = Workout.create!(content: 'Walking: 3.5 mph (17 min/mi)
+Walk on a path with no incline', category: 'Aerobic', calories: 133, time: 30)
+@dumbbells = Workout.create!(content: 'Walking: 3.5 mph (17 min/mi)
+Walk on a path with no incline', category: 'Aerobic', calories: 133, time: 30)
+@dumbbells = Workout.create!(content: 'Walking: 3.5 mph (17 min/mi)
+Walk on a path with no incline', category: 'Aerobic', calories: 133, time: 30)
+@dumbbells = Workout.create!(content: 'Walking: 3.5 mph (17 min/mi)
+Walk on a path with no incline', category: 'Aerobic', calories: 133, time: 30)
+@dumbbells = Workout.create!(content: 'Walking: 3.5 mph (17 min/mi)
+Walk on a path with no incline', category: 'Aerobic', calories: 133, time: 30)
+@dumbbells = Workout.create!(content: 'Walking: 3.5 mph (17 min/mi)
+Walk on a path with no incline', category: 'Aerobic', calories: 133, time: 30)
 puts "#{Workout.count} workouts created"
 
 
