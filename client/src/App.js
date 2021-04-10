@@ -58,20 +58,20 @@ function App() {
           <Route path="/workouts/:id/">
             <WorkoutDetails currentUser={currentUser}/>
           </Route>
-          <Route path="/foods">
-            <FoodTracker currentUser={currentUser}/>
-          </Route>
           <Route path="/login">
             <Login handleLogin={handleLogin} currentUser={currentUser}/>
           </Route>
           <Route path="/register">
             <Register handleRegister={handleRegister} currentUser={currentUser}/>
           </Route>
-          <Route path="/food/:id">
+          <Route path="/foods/new">
+            <AddFood currentUser={currentUser}/>
+          </Route>
+          <Route path="/foods/:id">
             <EditFood currentUser={currentUser}/>
             </Route>
-          <Route path="/food/new">
-            <AddFood currentUser={currentUser}/>
+          <Route path="/foods">
+            <FoodTracker currentUser={currentUser}/>
           </Route>
           <Route path="/workouts/">
             <WorkoutIndex currentUser={currentUser}/>
