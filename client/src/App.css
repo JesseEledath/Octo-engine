@@ -1,9 +1,9 @@
 .body {
   text-align: center;
   display: flex;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
 }
-a{
+a {
   text-decoration: none;
-  font-family: 'Cairo',sans-serif;
+  font-family: "Cairo", sans-serif;
 }

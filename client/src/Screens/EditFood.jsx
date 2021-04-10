@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { useHistory } from 'react-router-dom'
-import { putFood } from '../Services/food'
+import { useHistory, useParams } from 'react-router-dom'
+import { putFood, getOneFood } from '../Services/food'
 
 function EditFood(props) {
   // States =====================================
@@ -9,10 +9,19 @@ function EditFood(props) {
     calories: "",
   });
   const history = useHistory()
+  const {id} = useParams()
   // useEffect to get specific data
   useEffect(() => {
-  
-  },[])
+    const getAFood = async () => {
+      const foodData = await getOneFood(id)
+      const { food_name, calories} = foodData
+      setFormData({
+        food_name ,
+        calories
+      })
+    }
+    getAFood()
+  },[id])
   // Handles
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,7 +32,7 @@ function EditFood(props) {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await putFood(formData)
+    await putFood(id, formData)
     history.push('/foods')
 }
   const { food_name, calories } = formData;
