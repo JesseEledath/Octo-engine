@@ -24,13 +24,13 @@ function FoodTracker(props) {
         <div key={foodItem.id}>
           {foodItem.food_name}
           {foodItem.calories}
-          <Link to={`/food/${foodItem.id}`}>
+          <Link to={`/foods/${foodItem.id}`}>
             <button>Edit</button>
           </Link>
           <button onClick={() => handleDelete(foodItem.id)}>Delete</button>
         </div>
       ))}
-      <Link to="/food/new">
+      <Link to="/foods/new">
         <button>Add a food</button>
       </Link>
     </div>
